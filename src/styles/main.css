@@ -1,0 +1,116 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #2e4052;
+    overflow-x: hidden;
+    font-family: monospace;
+    user-select: none;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 2em;
+    width: 100%;
+    height: 100%;
+}
+
+#searchForm {
+    margin-top: 1.5em;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 1em;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#searchDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+#searchSuggestions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.suggestion {
+    background-color: white;
+    border-radius: 2px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 0.1em 0 0.1em 0;
+    cursor: default;
+}
+
+.suggestion:hover {
+    background-color: lightblue;
+}
+
+input, button {
+    padding: 0.5em;
+}
+
+button {
+    color: #f56476;
+    font-weight: bold;
+}
+
+
+#pageSelector {
+    display: flex;
+    font-size: 1.6em;
+    column-gap: 0.4em;
+    color: white;
+}
+
+.page {
+    cursor: pointer;
+    text-decoration-line: underline;
+}
+
+.page:hover {
+    color: goldenrod;
+}
+
+.pageSelected {
+    pointer-events: none;
+    text-decoration-line: underline;
+    color: rgb(153, 117, 26);
+}
+
+#gifsDisplay {
+    display: grid;
+    width: max-content;
+    height: max-content;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1em;
+    padding: 1em;
+}
+
+img {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 8px;
+}
+
+@media(max-width: 600px) {
+    #gifsDisplay {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 1em;
+    }
+
+}
